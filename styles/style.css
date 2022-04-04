@@ -114,6 +114,10 @@ img {
     gap: 30px;
 }
 
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in;
+}
+
 .showcase-form {
     position: relative;
     top: 60px;
@@ -122,6 +126,7 @@ img {
     padding: 40px;
     z-index: 100;
     justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
 }
 
 .showcase-form .form-control {
@@ -159,6 +164,7 @@ img {
 /* Services */
 .services {
     padding-top: 100px;
+    animation: slideInFromBottom 1s ease-in;
 }
 
 .services-heading {
@@ -226,9 +232,49 @@ img {
     margin: 0 10px;
 }
 
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
 
 /* Tablets and Under */
-@media(max-width: 820px){
+@media screen and (max-width: 768px){
     .grid, 
     .showcase .grid,
     .clients .grid,
@@ -245,16 +291,18 @@ img {
     .showcase-text {
         text-align: center;
         margin-top: 40px;
+        animation: slideInFromTop 1s ease-in;
     }
 
     .showcase-form {
         justify-self: center;
         margin: auto;
+        animation: slideInFromBottom 1s ease-in;
     }
 }
 
 /* Mobile */
-@media(max-width: 500px) {
+@media screen and (max-width: 600px) {
     .navbar {
         height: 110px;
     }
