@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --primary-color: #333;
+    --brand-color: #ffb500;
+    --dark-color: #b7860e;
+    --light-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', 'san-serif';
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.logo {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 60%;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Navbar styling */
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom:  2px var(--brand-color) solid;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+    overflow: visible;
+}
+
+/* Hero section */
+.showcase {
+    height: 400px;
+    /* background-color: var(--primary-color); */
+    color: white;
+    position: relative;
+    background-image: url("../images/Hero-section-background-min.jpg"), linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.5));
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+/* .showcase-text {
+    padding-top: 5.5rem;
+    padding-bottom: 6rem;
+} */
+
+.showcase h1{
+    font-size: 35px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.showcase p {
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.showcase .grid{
+    overflow: visible;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+/* Services */
+.services {
+    padding-top: 100px;
+}
+
+.services-heading {
+    max-width: 500px;
+    margin: auto;
+}
+
+.services .grid h3 {
+    font-size: 35px;
+}
+
+.services .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.servicesimg {
+    height: 30%;
+    width: auto;
+}
+
+/* Clients */
+.clients {
+    padding-top: 20px;
+}
+
+.lang {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* Cloud */
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+/* Languages */
+.languages .flex {
+    flex-wrap: wrap;
+}
+
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover{
+    transform: translateY(-15px);
+}
+
+/* About Us */
+.about-head img {
+    width: 200px;
+    justify-self: flex-end;
+}
+
+/* Footer */
+.footer .social a {
+    margin: 0 10px;
+}
+
+
+/* Tablets and Under */
+@media(max-width: 820px){
+    .grid, 
+    .showcase .grid,
+    .clients .grid,
+    .services .grid,
+    .cloud .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+    }
+}
+
+/* Mobile */
+@media(max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
