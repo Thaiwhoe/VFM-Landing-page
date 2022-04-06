@@ -196,6 +196,14 @@ img {
     margin: auto;
 }
 
+.clients img {
+    width: 110px
+}
+
+.clients .card {
+    max-height: 150px;
+}
+
 /* Cloud */
 .cloud .grid{
     grid-template-columns: 4fr 3fr;
