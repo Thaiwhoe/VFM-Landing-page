@@ -33,20 +33,21 @@
                 <h1>THE FACILITY MANAGEMENT COMPANY YOU HAVE BEEN LOOKING FOR</h1>
                 <p>Providing Quality Facilities Management Services Is What We Do Best</p>
                 <a href="#service" class="btn btn-outline">Learn More</a>
+                <a href="https://wa.me/08091118902" class="btn2 btn-whatsapp"><i class="fa-brands fa-whatsapp">Let us Chat</i></a>
             </div>
             <div class="showcase-form card">
                 <h2>Contact Us</h2>
-                <form>
+                <form onSubmit = "return false">
                     <div class="form-control">
-                        <input type="text" name="Name" placeholder="First-Name Last-Name" required>
+                        <input type="text" id="name" name="Name" placeholder="First-Name Last-Name" required>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="Phone Number" placeholder="Phone Number" required>
+                        <input type="text" id="contact" name="Phone Number" placeholder="Phone Number" required>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="Email" placeholder="email@email.com" required>
+                        <input type="text" id="email" name="Email" placeholder="email@email.com" required>
                     </div>
-                    <input type="submit" value="Submit" class="btn btn-primary">
+                    <input type="submit" value="Submit" class="btn btn-primary" id="submitButton">
                 </form>
             </div>
         </div>
@@ -103,10 +104,10 @@
             We have had the opportunity of delivering excellent service to top brands like
         </h2>
         <div class="container flex clients">
-            <div class="card">
+            <!-- <div class="card">
                 <h4>Sokoloan</h4>
                 <img src="images/logo/Layer 1.jpg" alt="">
-            </div>
+            </div> -->
             <div class="card">
                 <h4>Tigerwit</h4>
                 <img src="images/logo/Layer 2.jpg" alt="">
@@ -215,5 +216,7 @@
             </div>
         </div>
     </footer>
+    <script src="app.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
