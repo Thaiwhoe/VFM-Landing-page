@@ -17,6 +17,8 @@ body {
     font-family: 'Lato', 'san-serif';
     color: #333;
     line-height: 1.6;
+    width: 100%;
+    height: 100vh;
 }
 
 ul {
